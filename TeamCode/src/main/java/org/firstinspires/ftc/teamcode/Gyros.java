@@ -96,13 +96,6 @@ public class Gyros extends LinearOpMode {
 
         ///////// All your code goes here!///////////
 
-        //
-
-        //gyroDrive(0.5, 3, 60);
-        gyroDrive(0.5, 6,0);
-        gyroDrive(0.5, 5,110);
-        gyroDrive(0.5,3,-20);
-
 
 
 

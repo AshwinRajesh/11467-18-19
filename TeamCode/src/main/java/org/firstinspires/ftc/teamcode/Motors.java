@@ -62,7 +62,7 @@ public class Motors extends LinearOpMode {
 
             ///////// All your code goes here!///////////
 
-            leftDrive.setPower(-gamepad1.left_stick_y);
+
 
             ////////////////////////////////////////////
 
@@ -91,7 +91,7 @@ public class Motors extends LinearOpMode {
                     telemetry.addData("Turning", Double.toString(rotation) + " inches");
                 }
             }
-            telemetry.addData("Gamepad", -gamepad1.left_stick_y);
+
             telemetry.addData("Status", "Run Time: " + runtime.toString());
             telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
             telemetry.update();
