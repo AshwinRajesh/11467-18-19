@@ -39,7 +39,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 @Autonomous(name="Encoders", group="EncodersChallenge")
 public class Encoders extends LinearOpMode {
 
-    private ElapsedTime     runtime = new ElapsedTime();
+    private ElapsedTime runtime = new ElapsedTime();
     private DcMotor leftDrive = null;
     private DcMotor rightDrive = null;
 
@@ -54,6 +54,9 @@ public class Encoders extends LinearOpMode {
 
         telemetry.addData("Status", "Resetting Encoders");
         telemetry.update();
+
+        leftDrive  = hardwareMap.get(DcMotor.class, "left_drive");
+        rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
 
         leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
@@ -71,7 +74,7 @@ public class Encoders extends LinearOpMode {
         ///////// All your code goes here!///////////
 
 
-
+        encoderDrive(0.5, 12, 12, 30.0);
 
 
         ////////////////////////////////////////////

@@ -66,7 +66,8 @@ public class Gyros extends LinearOpMode {
     public void runOpMode() {
 
         gyro = (ModernRoboticsI2cGyro)hardwareMap.gyroSensor.get("gyro");
-
+        leftDrive  = hardwareMap.get(DcMotor.class, "left_drive");
+        rightDrive = hardwareMap.get(DcMotor.class, "right_drive");
 
         leftDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         rightDrive.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
@@ -96,6 +97,7 @@ public class Gyros extends LinearOpMode {
 
         ///////// All your code goes here!///////////
 
+        gyroDrive(1, 12, 45);
 
 
 

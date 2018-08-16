@@ -62,6 +62,8 @@ public class Motors extends LinearOpMode {
 
             ///////// All your code goes here!///////////
 
+            leftDrive.setPower(-gamepad1.left_stick_y);
+            rightDrive.setPower(-gamepad1.right_stick_y);
 
 
             ////////////////////////////////////////////
@@ -69,7 +71,7 @@ public class Motors extends LinearOpMode {
 
             // Robot Simulator - don't touch!
 
-            double leftPower = leftDrive.getPower();
+            /*double leftPower = leftDrive.getPower();
             double rightPower = rightDrive.getPower();
             double distance;
             double rotation;
@@ -90,10 +92,10 @@ public class Motors extends LinearOpMode {
                     rotation = absPower * (elapsed / 0.4) * 4 * 3.14 * 12 * 3.14 / 90;
                     telemetry.addData("Turning", Double.toString(rotation) + " inches");
                 }
-            }
+            }*/
 
             telemetry.addData("Status", "Run Time: " + runtime.toString());
-            telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
+            telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftDrive.getPower(), rightDrive.getPower());
             telemetry.update();
 
         }

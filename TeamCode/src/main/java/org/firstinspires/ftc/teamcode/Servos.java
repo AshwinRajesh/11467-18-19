@@ -53,6 +53,7 @@ public class Servos extends LinearOpMode {
         servo = hardwareMap.get(Servo.class, "servo");
 
         servo.setDirection(Servo.Direction.REVERSE);
+        servo.setPosition(0);
 
         waitForStart();
         runtime.reset();
@@ -61,8 +62,11 @@ public class Servos extends LinearOpMode {
 
             ///////// All your code goes here!///////////
 
-
-
+            if (gamepad1.y) {
+                servo.setPosition(0.5);
+            }  else {
+                servo.setPosition(0);
+            }
 
             ////////////////////////////////////////////
 

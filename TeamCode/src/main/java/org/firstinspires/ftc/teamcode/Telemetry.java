@@ -55,7 +55,7 @@ public class Telemetry extends LinearOpMode {
             ///////// All your code goes here!///////////
 
 
-
+            telemetry.addData("Hello", "I am alive");
 
 
             ////////////////////////////////////////////
