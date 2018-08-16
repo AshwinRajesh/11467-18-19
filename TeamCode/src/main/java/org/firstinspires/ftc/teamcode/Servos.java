@@ -38,18 +38,19 @@ import com.qualcomm.robotcore.util.Range;
 
 
 @TeleOp(name="Servos", group="ServoChallenge")
-@Disabled
 public class Servos extends LinearOpMode {
 
     private ElapsedTime runtime = new ElapsedTime();
     private Servo servo = null;
+
+
 
     @Override
     public void runOpMode() {
         telemetry.addData("Status", "Initialized");
         telemetry.update();
 
-        servo = hardwareMap.get(Servo.class, "left_drive");
+        servo = hardwareMap.get(Servo.class, "servo");
 
         servo.setDirection(Servo.Direction.REVERSE);
 
@@ -59,7 +60,6 @@ public class Servos extends LinearOpMode {
         while (opModeIsActive()) {
 
             ///////// All your code goes here!///////////
-
 
 
 

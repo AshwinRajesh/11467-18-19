@@ -37,7 +37,6 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 
 
 @Autonomous(name="Encoders", group="EncodersChallenge")
-@Disabled
 public class Encoders extends LinearOpMode {
 
     private ElapsedTime     runtime = new ElapsedTime();

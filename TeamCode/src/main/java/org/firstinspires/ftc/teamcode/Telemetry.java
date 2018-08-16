@@ -38,7 +38,6 @@ import com.qualcomm.robotcore.util.Range;
 
 
 @TeleOp(name="Telemetry", group="TelemetryPractice")
-@Disabled
 public class Telemetry extends LinearOpMode {
 
     private ElapsedTime runtime = new ElapsedTime();

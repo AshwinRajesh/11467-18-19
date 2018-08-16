@@ -39,7 +39,6 @@ import com.qualcomm.robotcore.util.Range;
 
 
 @Autonomous(name="Gyros", group="GyroChallenge")
-@Disabled
 public class Gyros extends LinearOpMode {
 
     private ElapsedTime runtime = new ElapsedTime();
@@ -97,6 +96,12 @@ public class Gyros extends LinearOpMode {
 
         ///////// All your code goes here!///////////
 
+        //
+
+        //gyroDrive(0.5, 3, 60);
+        gyroDrive(0.5, 6,0);
+        gyroDrive(0.5, 5,110);
+        gyroDrive(0.5,3,-20);
 
 
 

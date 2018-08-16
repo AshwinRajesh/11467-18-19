@@ -38,7 +38,6 @@ import com.qualcomm.robotcore.util.Range;
 
 
 @TeleOp(name="Motors", group="MotorChallenge")
-@Disabled
 public class Motors extends LinearOpMode {
 
     private ElapsedTime runtime = new ElapsedTime();
@@ -63,9 +62,7 @@ public class Motors extends LinearOpMode {
 
             ///////// All your code goes here!///////////
 
-
-
-
+            leftDrive.setPower(-gamepad1.left_stick_y);
 
             ////////////////////////////////////////////
 
@@ -91,17 +88,15 @@ public class Motors extends LinearOpMode {
                     telemetry.addData("Moving", Double.toString(distance) + " inches");
                 } else {
                     rotation = absPower * (elapsed / 0.4) * 4 * 3.14 * 12 * 3.14 / 90;
-                    telemetry.addData("Moving", Double.toString(rotation) + " inches");
+                    telemetry.addData("Turning", Double.toString(rotation) + " inches");
                 }
             }
-
+            telemetry.addData("Gamepad", -gamepad1.left_stick_y);
             telemetry.addData("Status", "Run Time: " + runtime.toString());
             telemetry.addData("Motors", "left (%.2f), right (%.2f)", leftPower, rightPower);
             telemetry.update();
 
         }
 
-        leftDrive.setPower(0);
-        rightDrive.setPower(0);
     }
 }
